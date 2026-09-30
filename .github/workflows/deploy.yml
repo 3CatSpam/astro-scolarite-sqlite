@@ -33,7 +33,8 @@ jobs:
             cd /var/www/scolarite/astro-scolarite-sqlite
 
             echo "Mise à jour du code..."
-            git pull origin
+            git fetch origin main
+            git reset --hard origin/main
             
             echo "Installation des dépendances..."
             bun ci
