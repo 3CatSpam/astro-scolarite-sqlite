@@ -49,7 +49,8 @@ jobs:
             sudo systemctl restart scolarite
 
             echo "Vérification du service..."
-            sudo systemctl is-active --quiet scolarite
+            systemctl is-active --quiet scolarite
+            systemctl status scolarite --no-pager || true
 
             echo "Health check..."
             curl --fail http://127.0.0.1:3000/
