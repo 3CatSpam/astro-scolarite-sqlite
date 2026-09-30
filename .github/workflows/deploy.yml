@@ -26,6 +26,9 @@ jobs:
           script: |
             set -e
 
+            export BUN_INSTALL="$HOME/.bun"
+            export PATH="$BUN_INSTALL/bin:$PATH"
+
             echo "======================================"
             echo "Début du déploiement"
             echo "======================================"
